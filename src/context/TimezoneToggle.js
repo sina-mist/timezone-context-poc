@@ -1,20 +1,16 @@
-import React, { PureComponent } from "react";
+import React, {PureComponent} from 'react';
 import TimezoneContext from './TimezoneContext';
 
 class TimezoneToggle extends PureComponent {
     render() {
         console.log('render toggle');
-        return <TimezoneContext.Consumer>{this.renderWithTimezoneContext}</TimezoneContext.Consumer>
-    }
-
-    renderWithTimezoneContext(timezoneProps) {
-        let {timezone, setTimezone} = timezoneProps;
+        let {timezone, setTimezone} = this.context;
         return (
-            <button onClick={() =>setTimezone(timezone === "Pacific" ? "Eastern" : "Pacific")}>
-                Toggle Timezone
-            </button>
+            <button onClick={() => setTimezone(timezone === 'Pacific' ? 'Eastern' : 'Pacific')}>Toggle Timezone</button>
         );
     }
 }
+
+TimezoneToggle.contextType = TimezoneContext;
 
 export default TimezoneToggle;

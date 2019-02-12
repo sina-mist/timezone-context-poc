@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react";
-import TimezonePanel from "./TimezonePanel";
+import React, {PureComponent} from 'react';
+import TimezonePanel from './TimezonePanel';
 import TimezoneContext from './TimezoneContext';
 
 class TimezoneApp extends PureComponent {
     constructor(props) {
         super(props);
-        this.state = {timezone: "Pacific"};
+        this.state = {timezone: 'Pacific'};
     }
 
     render() {
@@ -17,7 +17,7 @@ class TimezoneApp extends PureComponent {
         return (
             <div>
                 <TimezoneContext.Provider value={timezoneContextValue}>
-                    <TimezonePanel/>
+                    <TimezonePanel />
                 </TimezoneContext.Provider>
             </div>
         );
@@ -26,7 +26,7 @@ class TimezoneApp extends PureComponent {
     setTimezone = (timezone) => {
         console.log('changing timezone');
         this.setState({timezone});
-    }
+    };
 }
 
 export default TimezoneApp;

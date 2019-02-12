@@ -1,4 +1,4 @@
-import { PureComponent } from "react";
+import {PureComponent} from 'react';
 
 export default class ControllerComponent extends PureComponent {
     constructor(props) {
@@ -20,9 +20,9 @@ export default class ControllerComponent extends PureComponent {
         }
     }
 
-    onModelChange() {
+    onModelChange = () => {
         if (this.getStateFromModels && this.isCompMounted) {
             this.setState(this.getStateFromModels());
         }
-    }
+    };
 }

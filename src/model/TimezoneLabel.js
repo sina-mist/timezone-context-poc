@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import TimezoneMdl from './TimezoneMdl';
 import ControllerComponent from './ControllerComponent';
 
@@ -10,7 +10,7 @@ class TimezoneLabel extends ControllerComponent {
     }
 
     getStateFromModels() {
-        return {timezone: TimezoneMdl.state.timezone};
+        return {timezone: TimezoneMdl.getTimezone()};
     }
 
     render() {
