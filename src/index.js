@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TimezoneApp from './context/TimezoneApp';
+//import TimezoneApp from './model/TimezoneApp';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<TimezoneApp />, document.getElementById('root'));
